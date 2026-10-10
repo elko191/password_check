@@ -1,5 +1,9 @@
+import score
+
 def estimated_time_to_crack(password):
     pool_size = 0
+    if score.no_leaked_passwords(password) < 0:
+        return "Cracked in less than a second"
     if any(char.islower() for char in password):
         pool_size += 26
     if any(char.isupper() for char in password):

@@ -57,11 +57,20 @@ def bad_sequence(password):
 
 def no_leaked_passwords(password):
     leaked_passwords = [
-     "123456", "password", "123456789", "qwerty", "12345678", "111111",
-     "123123", "abc123", "password1", "iloveyou", "admin", "welcome", 
-     "monkey", "dradon", "letmein", "87654321", "9876554321", "22222",
-     "333333", "444444", "555555", "666666", "777777", "888888", "999999",
-     "000000"    
+               "123456", "password", "123456789", "qwerty", "12345678", "111111",
+               "123123", "abc123", "password1", "iloveyou", "admin", "welcome", 
+               "monkey", "dragon", "letmein", "87654321", "987654321", "222222",
+               "333333", "444444", "555555", "666666", "777777", "888888", "999999",
+               "000000", "12345", "1234", "1234567", "abcdef", "asdfgh",
+               
+               # Vanliga ord och namn
+               "sunshine", "princess", "football", "baseball", "iloveyou1", "trustno1",
+               "master", "shadow", "superman", "computer", "hello", "secret", "matrix",
+               "pepper", "buster", "ranger", "killer", "monster", "jordan", "peanut",
+               
+               # Standardord för admin/system
+               "root", "toor", "system", "administrator", "guest", "user", "test",
+               "changeme", "default", "pass", "p@ssword", "p@ssw0rd"  
     ]
     for seq in leaked_passwords:
         if seq in password.lower():

@@ -6,7 +6,7 @@ while True:
     user_password = input("Enter your password here: ")
     
     if user_password.lower() == "exit":
-        print("Program closed")
+        print("Exit program")
         break
         
     if not forbidden.forbidden_characters(user_password):
